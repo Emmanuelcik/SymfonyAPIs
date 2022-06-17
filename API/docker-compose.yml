@@ -3,6 +3,7 @@ version: '3.5'
 services:
   symfony-api-platform-web:
     container_name: symfony-api-platform-web
+    platform: linux/x86_64
     build:
       context: ./docker/nginx
       args:
@@ -18,6 +19,7 @@ services:
 
   symfony-api-platform-be:
     container_name: symfony-api-platform-be
+    platform: linux/x86_64
     build:
       context: docker/php
       args:
@@ -39,6 +41,7 @@ services:
 
   symfony-api-platform-db:
     container_name: symfony-api-platform-db
+    platform: linux/x86_64
     image: mysql:8.0
     # build:
     #   context: ./docker/database
